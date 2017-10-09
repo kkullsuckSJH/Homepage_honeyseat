@@ -4,7 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-
 /* Global Styles */
 
 html,
@@ -16,14 +15,15 @@ body {
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
-.bg-layer {margin:0 auto;
+/*
+.bg-layer {
+  margin:0 auto;
   width: 600px;
   padding: 30px;
   background-color: #ffffff;
   background-color: rgba( 255, 255, 255, 0.3 );
 }
-
+*/
 .main-logo {
   width: 100px;
   padding-top: 60px;
@@ -31,7 +31,13 @@ body {
 }
 
 .subtitle {
+  margin:0 auto;
   color: black;
+  width: 440px;
+  background-color: #ffffff;
+  background-color: rgba( 255, 255, 255, 0.6 );
+  font-family: 'Jeju Gothic', sans-serif;
+  /*font-family: 'Nanum Pen Script', cursive;*/
 }
 
 .text-vertical-center {
@@ -208,7 +214,6 @@ hr.small {
 .service-item {
     margin-bottom: 30px;
 }
-
 
 /* Callout */
 
