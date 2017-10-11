@@ -39,7 +39,12 @@ body {
 	border-color:#ccc;
 }
 
-/*.stylish-input-group button{
+.stylish-input-group button{
     border:0;
-    background:transparent;
-}*/
+    background-color:#fac65e;
+}
+
+
+
+#hearts { color: #ee8b2d;}
+#hearts-existing { color: #ee8b2d;}

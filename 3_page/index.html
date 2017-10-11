@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -116,6 +115,22 @@
           <div class="card h-100">
             <h4 class="card-header">Card Title</h4>
             <div class="card-body">
+              <div class="container">
+                <!--별점-->
+	<div class="row">
+		<h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
+	</div>
+    <div class="row lead">
+        <div id="hearts" class="starrr"></div>
+        You gave a rating of <span id="count">0</span> star(s)
+	</div>
+
+    <div class="row lead">
+        <p>Also you can give a default rating by adding attribute data-rating</p>
+        <div id="hearts-existing" class="starrr" data-rating='4'></div>
+        You gave a rating of <span id="count-existing">4</span> star(s)
+    </div>
+</div>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
@@ -155,26 +170,43 @@
       <!-- Features Section -->
       <div class="container">
         <!--좌석배치도-->
-        <img class="img-fluid rounded" src="img/1st_floor.PNG" alt="">
-        <!--<a href="#" class="btn btn-primary">1</a>
-        <a href="#" class="btn btn-primary">2</a>
-        <a href="#" class="btn btn-primary">3</a>-->
+        <script>
+        /*var img = new Array("1st_floor.PNG", "2nd_floor.PNG", "3rd floor.PNG");
+        var i;
+        i = 0;
+        function changeImg(){
+          document.floor_img.src = img[i++];
+        }*/
+          function changeImg1(){
+            var floor_img = document.getElementById('floor_img_1');
+            floor_img.src = "img/1st_floor.PNG";
+          }
+            function changeImg2(){
+              var floor_img = document.getElementById('floor_img_1');
+              floor_img.src = "img/2nd_floor.PNG";
+            }
+              function changeImg3(){
+                var floor_img = document.getElementById('floor_img_1');
+                floor_img.src = "img/3rd_floor.PNG";
+              }
+        </script>
+
+        <img class="img-fluid rounded" src="img/1st_floor.PNG" alt="" id="floor_img_1">
 
         <div class="row" style="margin-top:30px;">
           <div class="col-sm-3">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary">1</button>
-                <button type="button" class="btn btn-primary">2</button>
-                <button type="button" class="btn btn-primary">3</button>
+              <input type="button" class="btn btn-primary" value="1" onClick="changeImg1()">
+              <input type="button" class="btn btn-primary" value="2" onClick="changeImg2()">
+              <input type="button" class="btn btn-primary" value="3" onClick="changeImg3()">
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-7">
             <div id="imaginary_container">
               <div class="input-group stylish-input-group">
-                <input type="text" class="form-control"  placeholder="Search" >
+                <input type="text" class="form-control"  placeholder="ex) A10" >
                 <span class="input-group-addon">
-                  <button type="submit" >
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  <button type="submit"> search
                   </button>
                 </span>
               </div>
@@ -228,6 +260,9 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--별점-->
+    <script src="js/star_grade.js"></script>
 
   </body>
 
