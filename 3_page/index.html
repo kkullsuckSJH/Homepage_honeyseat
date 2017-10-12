@@ -114,7 +114,7 @@
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header">Top 1</h4>
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
@@ -125,7 +125,7 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header">Top 2</h4>
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
             </div>
@@ -136,7 +136,32 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+
+            <!--별점-->
+            <h4 class="card-header">
+              <div class="container">
+              	<div class="row">
+              		<h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
+              	</div>
+                  <div class="row lead">
+                      <div id="hearts" class="starrr">
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+                      </div>
+                      You gave a rating of <span id="count">0</span> star(s)
+              	</div>
+
+                  <div class="row lead">
+                      <p>Also you can give a default rating by adding attribute data-rating</p>
+                      <div id="hearts-existing" class="starrr" data-rating='4'></div>
+                      You gave a rating of <span id="count-existing">4</span> star(s)
+                  </div>
+              </div>
+            </h4>
+
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
@@ -163,8 +188,8 @@
         <div class="row" style="margin-top:30px;">
           <div class="col-sm-3">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary">1</button>
-                <button type="button" class="btn btn-primary">2</button>
+                <button type="button" class="btn btn-primary" href="#">1</button>
+                <button type="button" class="btn btn-primary" href="img/2st_floor.PNG">2</button>
                 <button type="button" class="btn btn-primary">3</button>
             </div>
           </div>
