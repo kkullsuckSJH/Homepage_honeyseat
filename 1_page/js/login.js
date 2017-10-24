@@ -63,7 +63,8 @@
 	  errorClass: "form-invalid",
 	  errorPlacement: function( label, element ) {
 	    if( element.attr( "type" ) === "checkbox" || element.attr( "type" ) === "radio" ) {
-    		element.parent().append( label ); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
+    		element.parent().append( label );
+        // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
 	    }
 			else {
   	  	label.insertAfter( element ); // standard behaviour
