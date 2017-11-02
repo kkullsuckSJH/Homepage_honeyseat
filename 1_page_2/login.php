@@ -1,10 +1,9 @@
 <?php
-// require("config/config.php");
-// require("lib/db.php");
-// $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
-// $result = mysqli_query($conn, "SELECT * FROM topic");
 
-  $conn = mysqli_connect("localhost:81", "root", "jih32952", "honeyseat", "3307");
+  $conn = mysqli_connect("localhost", "root", "jih32952", "honeyseat", "3307");
+  if (!$conn) {
+    echo "connect error";
+  }
   mysqli_select_db($conn, "honeyseat");
 
 
@@ -12,13 +11,18 @@
   $user_pw = mysqli_real_escape_string($conn,$_POST['lg_password']);
 
 
-    $sql = "SELECT * FROM `user WHERE user_id = '{$lg_id}';";
+    $sql = "SELECT * FROM `user` WHERE `user_id` = '{$user_id}';";
     $result = mysqli_query($conn, $sql);
 
+
     if ($result->num_rows > 0) {
-      $row = mysqli_fetch_assoc($result);
-      echo 'right';
+      // $row = mysqli_fetch_assoc($result);
+      // echo "{$row}";
+      echo "right";
       // $user_id = $row['id'];
+    }
+    else {
+      echo "wrong";
     }
     // else {
     //   $sql = "INSERT INTO user (id, name, password) VALUES (NULL, '{$author}', '0000');";
@@ -36,8 +40,9 @@
       //   }
 
     mysqli_query($conn, $sql);
-    //header('Location: index.html');
+    header('Location: index.html');
 
+    mysqli_close($conn);
 ?>
 <?php
  #require("config/config.php");
