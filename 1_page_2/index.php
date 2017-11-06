@@ -71,7 +71,6 @@
         				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
         			</div>
         			<div class="etc-login-form">
-        				<p>forgot your password? <a href="#">click here</a></p>
         				<p>new user? <a href="register.html">create new account</a></p>
         			</div>
         		</form>
@@ -80,7 +79,7 @@
         </div>
 
         <br>
-        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">바로가기</a>
+        <a href="2_page_2/index.html" class="btn btn-dark btn-lg js-scroll-trigger">공연장 바로가기</a>
 
     </div>
     </header>

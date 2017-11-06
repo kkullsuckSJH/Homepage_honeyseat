@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    $is_logged = $_SESSION['is_logged'];
+    if($is_logged=='YES') {
+        $user_id = $_SESSION['user_id'];
+        $message = $user_id . ' 님, 로그인 했습니다.';
+    }
+    else {
+        echo '<script>alert("로그인이 실패했습니다.");</script>';
+?>
+
+
+<?php
+        //header("Location: index.php");
+      }
+
+          var_dump($_SESSION);
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,35 +52,6 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
-      <i class="fa fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
-          <i class="fa fa-times"></i>
-        </a>
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#top">Start Bootstrap</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#top">Home</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close").click();>Contact</a>
-        </li>
-      </ul>
-    </nav>
 
     <!-- Header -->
     <header class="header" id="top">
@@ -74,69 +64,13 @@
         <h1>HONEY SEAT</h1>
         <div class="subtitle">3D 시뮬레이션을 이용한 공연 좌석 정보 확인 웹 어플리케이션</div>
         <br>
-
-
-  <!-- REGISTRATION FORM -->
-  <div class="text-center" style="padding:50px 0">
-  	<div class="logo">register</div>
-  	<!-- Main Form -->
-  	<div class="login-form-1">
-  		<form method='post'  action='register.php'  id="register-form" class="text-left">
-  			<div class="login-form-main-message"></div>
-  			<div class="main-login-form">
-  				<div class="login-group">
-  					<div class="form-group">
-  						<label for="reg_username" class="sr-only">id</label>
-  						<input type="text" class="form-control" id="reg_id" name="reg_id" placeholder="id">
-  					</div>
-  					<div class="form-group">
-  						<label for="reg_password" class="sr-only">Password</label>
-  						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
-  					</div>
-  					<!-- <div class="form-group">
-  						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-  						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
-  					</div> -->
-
-            <div class="form-group">
-              <label for="reg_email" class="sr-only">name</label>
-              <input type="text" class="form-control" id="reg_name" name="reg_name" placeholder="name">
-            </div>
-  					<div class="form-group">
-  						<label for="reg_email" class="sr-only">Email</label>
-  						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
-  					</div>
-  					<!-- <div class="form-group">
-  						<label for="reg_fullname" class="sr-only">Full Name</label>
-  						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
-  					</div>
-
-  					<div class="form-group login-group-checkbox">
-  						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
-  						<label for="male">male</label>
-
-  						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
-  						<label for="female">female</label>
-  					</div> -->
-
-  					<div class="form-group login-group-checkbox">
-  						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
-  						<label for="reg_agree">i agree with <a href="#">terms</a></label>
-  					</div>
-  				</div>
-  				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-  			</div>
-  			<div class="etc-login-form">
-  				<p>already have an account? <a href="index.php">login here</a></p>
-  			</div>
-  		</form>
-  	</div>
-  	<!-- end:Main Form -->
-  </div>
-
-
+        <div class="subtitle">
+          <?php
+            echo $message;
+          ?>
+        </div>
         <br>
-        <a href="2_page_2/index.html" class="btn btn-dark btn-lg js-scroll-trigger">공연장 바로가기</a>
+        <a href="2_page_2/index.html" class="btn btn-dark btn-lg js-scroll-trigger"> 공연장 바로가기</a>
 
     </div>
     </header>
@@ -144,9 +78,9 @@
     <!-- About -->
     <section id="about" class="about">
       <div class="container text-center">
-        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-        <p class="lead">This theme features some wonderful photography courtesy of
-          <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+        <p class="lead">각 좌석도에서 좌석 버튼을 클릭하시면 해당 좌석에서 촬영한 무대시각선을 보실 수 있습니다. <br>
+촬영 시야(VIEW)이기 때문에 실제 눈으로 보는 것과는 약간의 차이가 있을 수 있습니다.
+          </p>
       </div>
       <!-- /.container -->
     </section>
@@ -170,7 +104,6 @@
                     <strong>3D Simulation</strong>
                   </h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6">
@@ -183,7 +116,6 @@
                     <strong>좌석 후기</strong>
                   </h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6">
@@ -196,7 +128,6 @@
                     <strong>좌석 추천</strong>
                   </h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6">
@@ -209,7 +140,6 @@
                     <strong>1st commnity</strong>
                   </h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
                 </div>
               </div>
             </div>
@@ -267,7 +197,6 @@
               </div>
             </div>
             <!-- /.row (nested) -->
-            <a href="#" class="btn btn-dark">View More Items</a>
           </div>
           <!-- /.col-lg-10 -->
         </div>

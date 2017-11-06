@@ -14,7 +14,7 @@
 
   $sql = "INSERT INTO `user`(`user_id`, `user_pw`, `user_name`, `user_email`) VALUES('{$user_id}', '{$user_pw}', '{$user_name}', '{$user_email}');";
   $result = mysqli_query($conn, $sql);
-  header('Location: index.html');
+  header('Location: index.php');
 
   if (! $result) {
     # code...
