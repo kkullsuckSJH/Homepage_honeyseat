@@ -67,7 +67,7 @@
           <p>1,2,3층에 걸쳐 3,022석의 객석을 갖추고 있습니다.<br>
           1,2층 객석 의자와 3층 벽면에 부착된 유일의 LCD모니터를 통해 공연자막과 동영상 서비스를 제공하고 있습니다.
           특히 최신 음향 장치를 설비하여 객석 구석구석까지 소리가 잘 전달되는 탁월한 음향 수준을 구현했습니다.</p>
-          <a class="btn btn-primary" href="http://localhost:81/Homepage_honeyseat_final/3_page/index.php">View Auditorium</a>
+          <a class="btn btn-primary" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/3_page/index.php">View Auditorium</a>
         </div>
       </div>
       <!-- /.row -->
