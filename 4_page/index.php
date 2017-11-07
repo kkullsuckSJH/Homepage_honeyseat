@@ -52,17 +52,16 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="http://localhost:81/Homepage_honeyseat_final/1_page/index.php">Home
+                      <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php">Home
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="http://localhost:81/Homepage_honeyseat_final/2_page/index.php">공연장
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="http://localhost:81/Homepage_honeyseat_final/4_page/index.php">후기 작성
+                      <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/2_page/index.php">공연장
                         <span class="sr-only">(current)</span>
                       </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성</a>
                     </li>
                   </ul>
                 </div>

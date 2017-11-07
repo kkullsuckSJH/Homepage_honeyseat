@@ -70,7 +70,7 @@
           ?>
         </div>
         <br>
-        <a href="http://localhost:81/Homepage_honeyseat_final/2_page/index.php" class="btn btn-dark btn-lg js-scroll-trigger"> 공연장 바로가기</a>
+        <a href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/2_page/index.php" class="btn btn-dark btn-lg js-scroll-trigger"> 공연장 바로가기</a>
 
     </div>
     </header>
