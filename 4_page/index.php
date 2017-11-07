@@ -1,3 +1,7 @@
+<?php
+    session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,11 +79,13 @@
         <!--<small>Secondary Text</small>-->
       </h1>
 
+
       <!--설문지 form-->
       <div class="col-lg-12">
               <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">이용한 공연장, 좌석에 대한 후기를 작성해주세요.</h2>
+                  <h2 class="h5 display">이용한 공연장, 좌석에 대한 후기를 작성해주세요. <?php echo $message;
+                   ?></h2>
                 </div>
                 <div class="card-block">
 
@@ -111,7 +117,7 @@
                       <div class="form-group row">
                         <label class="col-sm-2 form-control-label">좌석 번호</label>
                         <div class="col-sm-10">
-                          <input placeholder="ex) A10" id="seat_code" name="seat_code" class="form-control" type="text">
+                          <input placeholder="ex) A10" id="seat_num" name="seat_num" class="form-control" type="text">
                         </div>
                       </div>
 

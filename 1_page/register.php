@@ -1,4 +1,5 @@
 <?php
+  session_start();
 
   $conn = mysqli_connect("localhost", "sjlim333", "j08300104", "sjlim333", "3306");
   if (!$conn) {
