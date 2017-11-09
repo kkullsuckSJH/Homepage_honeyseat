@@ -79,6 +79,7 @@ a:hover {
   border-bottom: 0;
 }
 .login-group {
+  width: 540px;
   background: #ffffff;
   color: #999999;
   border-radius: 8px;

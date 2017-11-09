@@ -33,36 +33,6 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
-      <i class="fa fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
-          <i class="fa fa-times"></i>
-        </a>
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#top">Start Bootstrap</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#top">Home</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close").click();>Contact</a>
-        </li>
-      </ul>
-    </nav>
-
     <!-- Header -->
     <header class="header" id="top">
       <!--white background layer-->
@@ -78,25 +48,22 @@
 
   <!-- REGISTRATION FORM -->
   <div class="text-center" style="padding:50px 0">
-  	<div class="logo">register</div>
+  	<div class="logo">회원가입</div>
   	<!-- Main Form -->
   	<div class="login-form-1">
   		<form method='post'  action='register.php'  id="register-form" class="text-left">
   			<div class="login-form-main-message"></div>
-  			<div class="main-login-form">
+        <div class="main-login-form" style="width: 500px;">
   				<div class="login-group">
   					<div class="form-group">
   						<label for="reg_username" class="sr-only">id</label>
   						<input type="text" class="form-control" id="reg_id" name="reg_id" placeholder="id">
   					</div>
+
   					<div class="form-group">
   						<label for="reg_password" class="sr-only">Password</label>
   						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
   					</div>
-  					<!-- <div class="form-group">
-  						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-  						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
-  					</div> -->
 
             <div class="form-group">
               <label for="reg_email" class="sr-only">name</label>
@@ -106,28 +73,80 @@
   						<label for="reg_email" class="sr-only">Email</label>
   						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
   					</div>
-  					<!-- <div class="form-group">
-  						<label for="reg_fullname" class="sr-only">Full Name</label>
-  						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
-  					</div>
 
-  					<div class="form-group login-group-checkbox">
-  						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
-  						<label for="male">male</label>
+            <div class="line"></div>
+            <div class="form-group row">
+              <label class="col-sm-2 form-control-label">설문조사</label>
+              <div class="col-sm-10">
+                <span class="help-block-none">선호하는 층을 선택해주세요.</span>
+                <div class="col-sm-10 select">
+                  <select name="floor" class="form-control">
+                    <option value="1">1층</option>
+                    <option value="2">2층</option>
+                    <option value="3">3층</option>
+                  </select>
+                </div>
 
-  						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
-  						<label for="female">female</label>
-  					</div> -->
+                <br>
 
-  					<div class="form-group login-group-checkbox">
-  						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
-  						<label for="reg_agree">i agree with <a href="#">terms</a></label>
-  					</div>
+                <span class="help-block-none">무대와의 거리를 선택해주세요.</span>
+                <div class="form-group">
+                    <select name="distance_score" multiple="" class="form-control">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+
+                  <br>
+
+                  <span class="help-block-none">가격은 어느정도가 적당한가요.</span>
+                  <div class="form-group">
+                      <select name="distance_score" multiple="" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+
+                    <br>
+
+                    <span class="help-block-none">사운드의 선호도는 어느 정도인가요.</span>
+                    <div class="form-group">
+                        <select name="distance_score" multiple="" class="form-control">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+              </div>
+      </div>
   				</div>
   				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
   			</div>
-  			<div class="etc-login-form">
-  				<p>already have an account? <a href="index.php">login here</a></p>
+  			<div class="etc-login-form" style="width: 500px;">
+  				<p>이미 회원이신가요?<a href="index.php">여기를 눌러주세요.</a></p>
   			</div>
   		</form>
   	</div>

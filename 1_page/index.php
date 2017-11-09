@@ -48,7 +48,7 @@
 
         <!-- LOGIN FORM -->
         <div class="text-center" style="padding:50px 0">
-          <div class="logo">login</div>
+          <div class="logo">로그인</div>
           <!-- Main Form -->
           <div class="login-form-1">
             <form method='post' action='login.php' id="login-form" class="text-left">
@@ -67,7 +67,7 @@
         				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
         			</div>
         			<div class="etc-login-form">
-        				<p>new user? <a href="register.html">create new account</a></p>
+        				<p>새회원이신가요?<a href="register.html">회원가입하기</a></p>
         			</div>
         		</form>
         	</div>
