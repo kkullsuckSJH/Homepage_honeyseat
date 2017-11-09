@@ -1,5 +1,7 @@
 <?php
   session_start();
+  $user_id = $_SESSION['user_id'];
+
   $conn = mysqli_connect("localhost", "sjlim333", "j08300104", "sjlim333", "3306");
   if (!$conn) {
     echo "connect error";
@@ -233,7 +235,7 @@
             <div id="imaginary_container">
 
               <div class="input-group stylish-input-group">
-                <input type="text" class="form-control"  placeholder="ex) A10" >
+                <input type="text" class="form-control"  placeholder="ex) A001" >
                 <span class="input-group-addon">
                   <button type="submit"> search
                   </button>
@@ -278,23 +280,39 @@
                 else {
                   $row['date'] = $date;
                 }
+
+                $seat_num =  $row['seat_num'];
+                $audi_code =  $row['audi_code'];
+
+                  # select audi_name ..
+                $sql = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
+                $result = mysqli_query($conn, $sql);
+                $audi_name_row = mysqli_fetch_assoc($result);
+                $audi_name = $audi_name_row['audi_name'];
+
+                # select audi_name ..
+                // $sql = "SELECT `star` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
+                // $result = mysqli_query($conn, $sql);
+                // $audi_name_array = mysqli_fetch_array($result);
+                // $audi_name = $seat_code_array['audi_name'];
+                //
+                $floor = $row['floor']."층";
              ?>
             <tr>
               <td><?php echo $row['review_num'];?></td>
-              <td><?php echo $row['audi_name'];?></td>
-              <td><?php echo $row['floor'];?></td>
-              <td><?php echo $row['audi_seat_num'];?></td>
-              <td><?php echo $row['star'];?></td>
-              <td><?php echo $row['content'];?></td>
-              <td><?php echo $row['user_name'];?></td>
+              <td><?php echo $audi_name;?></td>
+              <td><?php echo $floor;?></td>
+              <td><?php echo $seat_num;?></td>
+              <td><?php echo $star;?></td>
+              <td><?php echo $row['title'];?></td>
+              <td><?php echo $row['user_id'];?></td>
               <td><?php echo $row['date'];?></td>
             </tr>
           <?php } ?>
           </tbody>
         </table>
-          <a href="#" class="btn btn-primary">후기 작성하기</a>
-
         <hr/>
+          <a href="#" class="btn btn-primary">후기 작성하기</a>
 
         <a class="btn btn-default"></a>
         <div class="jb-center">
@@ -303,7 +321,6 @@
               <li><a href="#">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
             </ul>
           </div>
         </div>

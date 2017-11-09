@@ -4,7 +4,7 @@
     if($is_logged=='YES') {
         $user_id = $_SESSION['user_id'];
         $message = $user_id.' 님, 로그인 했습니다.';
-        $button = '';
+        $button = ' ';
     }
     else {
       $message = '로그인에 실패했습니다. 다시 로그인해 주시기 바랍니다.';
@@ -12,9 +12,7 @@
       $button = '<a href="index.php" class="btn btn-primary">Login again</a>';
       //header("Location: index.php");
     }
-
-          var_dump($_SESSION);
-        ?>
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
