@@ -1,5 +1,13 @@
 <?php
-    session_start(); ?>
+    session_start();
+    $is_logged = $_SESSION['is_logged'];
+    if($is_logged=='YES') {
+      $button = '<a href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/logout.php" class="btn btn-primary">로그아웃</a>';
+    }
+    else {
+      $button = ' ';
+    }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +52,10 @@
             <li class="nav-item">
               <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성</a>
             </li>
+            <?php echo $button; ?>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/logout.php">로그아웃</a>
+            </li> -->
           </ul>
         </div>
       </div>
