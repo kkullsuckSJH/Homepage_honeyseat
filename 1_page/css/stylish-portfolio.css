@@ -311,11 +311,15 @@ a:hover {
 }
 /*=== 3. Text Outside the Box ===*/
 .etc-login-form {
-  color: ##040404;
+  color: #ffc000;
   padding: 10px 20px;
 }
 .etc-login-form p {
+  color: #ffffff;
   margin-bottom: 5px;
+  width: 280px;
+  background-color: #2d2c28;
+  background-color: rgba( 0, 0, 0, 0.6 );
 }
 /*=== 4. Main Form ===*/
 .login-form-1 {

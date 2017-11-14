@@ -67,7 +67,7 @@
         				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
         			</div>
         			<div class="etc-login-form">
-        				<p>새회원이신가요?<a href="register.html">회원가입하기</a></p>
+        				<p>새회원이신가요? <a href="register.html">회원가입하기</a></p>
         			</div>
         		</form>
         	</div>

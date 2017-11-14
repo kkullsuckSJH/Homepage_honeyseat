@@ -217,32 +217,39 @@
 
         <div class="row" style="margin-top:30px;">
           <div class="col-sm-3">
-
-          <center>
-            <div class="btn-group">
-              <center>
-              <input type="button" class="btn btn-primary" value="1" onClick="changeImg1()">
-              <input type="button" class="btn btn-primary" value="2" onClick="changeImg2()">
-              <input type="button" class="btn btn-primary" value="3" onClick="changeImg3()">
+            <center>
+              <div class="btn-group">
+                <center>
+                  <input type="button" class="btn btn-primary" value="1" onClick="changeImg1()">
+                  <input type="button" class="btn btn-primary" value="2" onClick="changeImg2()">
+                  <input type="button" class="btn btn-primary" value="3" onClick="changeImg3()">
+                </center>
+              </div>
             </center>
-            </div>
-          </center>
           </div>
 
-
           <div class="col-sm-3 col-sm-offset-7">
-
             <div id="imaginary_container">
-
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                  <input type="radio" name="selectFloor" id="1st"> 1충
+                </label>
+                <label class="btn btn-primary active">
+                  <input type="radio" name="selectFloor" id="2nd"> 2층
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="selectFloor" id="3rd"> 3층
+                </label>
+              </div>
               <div class="input-group stylish-input-group">
                 <input type="text" class="form-control"  placeholder="ex) A001" >
                 <span class="input-group-addon">
-                  <button type="submit"> search
-                  </button>
+                  <button type="submit"> search </button>
                 </span>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
