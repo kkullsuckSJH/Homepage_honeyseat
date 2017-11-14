@@ -13,7 +13,17 @@
   $user_name = mysqli_real_escape_string($conn,$_POST['reg_name']);
   $user_email = mysqli_real_escape_string($conn,$_POST['reg_email']);
 
-  $sql = "INSERT INTO `user`(`user_id`, `user_pw`, `user_name`, `user_email`) VALUES('{$user_id}', '{$user_pw}', '{$user_name}', '{$user_email}');";
+  $user_prefer_floor = $_POST['reg_prefer_floor'];
+  $user_prefer_distance = $_POST['reg_prefer_distance'];
+  $user_prefer_cost = $_POST['reg_prefer_cost'];
+  $user_prefer_sound = $_POST['reg_prefer_sound'];
+
+  $user_rank_distance = $_POST['reg_rank_distance'];
+  $user_rank_cost = $_POST['reg_rank_cost'];
+  $user_rank_sound = $_POST['reg_rank_sound'];
+
+  $sql = "INSERT INTO `user`(`user_id`, `user_pw`, `user_name`, `user_email`, `user_prefer_floor`, `user_prefer_distance`, `user_prefer_cost`, `user_prefer_sound`, `user_rank_distance`, `user_rank_cost`, `user_rank_sound`)
+  VALUES('{$user_id}', '{$user_pw}', '{$user_name}', '{$user_email}', '{$user_prefer_floor}', '{$user_prefer_distance}', '{$user_prefer_cost}', '{$user_prefer_sound}', '{$user_rank_distance}', '{$user_rank_cost}', '{$user_rank_sound}');";
   $result = mysqli_query($conn, $sql);
   header('Location: index.php');
 

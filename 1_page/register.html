@@ -51,7 +51,7 @@
   	<div class="logo">회원가입</div>
   	<!-- Main Form -->
   	<div class="login-form-1">
-  		<form method='post'  action='register.php'  id="register-form" class="text-left">
+  		<form method='post'  action='register.php' id="register-form" class="text-left">
   			<div class="login-form-main-message"></div>
         <div class="main-login-form" style="width: 500px;">
   				<div class="login-group">
@@ -76,30 +76,11 @@
 
             <div class="line"></div>
             <div class="form-group row">
-              <label class="col-sm-2 form-control-label">우선순위</label>
-              <div class="col-sm-10">
-                <span class="help-block-none">우선으로 생각하는 것에 순위를 정해주세요.<br>거리</span>
-                <textarea class="form-control" rows="1" id="title" name="title"></textarea>
-
-                <br>
-
-                <span class="help-block-none">가격</span>
-                <textarea class="form-control" rows="1" id="title" name="title"></textarea>
-
-                <br>
-
-                <span class="help-block-none">사운드</span>
-                <textarea class="form-control" rows="1" id="title" name="title"></textarea>
-              </div>
-            </div>
-
-            <div class="line"></div>
-            <div class="form-group row">
               <label class="col-sm-2 form-control-label">설문조사</label>
               <div class="col-sm-10">
                 <span class="help-block-none">선호하는 층을 선택해주세요.</span>
                 <div class="col-sm-10 select">
-                  <select name="floor" class="form-control">
+                  <select name="reg_prefer_floor" class="form-control" id="reg_prefer_floor">
                     <option value="1">1층</option>
                     <option value="2">2층</option>
                     <option value="3">3층</option>
@@ -110,7 +91,7 @@
 
                 <span class="help-block-none">선호하는 무대와의 거리를 선택해주세요.<br>(숫자가 작을수록 무대와 가까이 있습니다.)</span>
                 <div class="form-group">
-                    <select name="distance_score" multiple="" class="form-control">
+                    <select name="reg_prefer_distance" multiple="" class="form-control" id="reg_prefer_distance">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -128,7 +109,7 @@
 
                   <span class="help-block-none">좌석의 가격에 부담을 느끼시나요?<br>(숫자가 작을수록 부담을 덜 느낍니다.)</span>
                   <div class="form-group">
-                      <select name="distance_score" multiple="" class="form-control">
+                      <select name="reg_prefer_cost" multiple="" class="form-control" id="reg_prefer_cost">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -146,7 +127,7 @@
 
                     <span class="help-block-none">소리에 민감하신가요?<br>(숫자가 작을수록 소리에 민감하지 않습니다.)</span>
                     <div class="form-group">
-                        <select name="distance_score" multiple="" class="form-control">
+                        <select name="reg_prefer_sound" multiple="" class="form-control" id="reg_prefer_sound">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -161,6 +142,26 @@
                     </div>
               </div>
             </div>
+
+            <div class="line"></div>
+            <div class="form-group row">
+              <label class="col-sm-2 form-control-label">우선순위</label>
+              <div class="col-sm-10">
+                <span class="help-block-none">우선으로 생각하는 것에 순위를 정해주세요.<br>거리</span>
+                <textarea class="form-control" id="reg_rank_distance" name="reg_rank_distance"></textarea>
+
+                <br>
+
+                <span class="help-block-none">가격</span>
+                <textarea class="form-control" id="reg_rank_cost" name="reg_rank_cost"></textarea>
+
+                <br>
+
+                <span class="help-block-none">사운드</span>
+                <textarea class="form-control" id="reg_rank_sound" name="reg_rank_sound"></textarea>
+              </div>
+            </div>
+
   				</div>
   				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
   			</div>
