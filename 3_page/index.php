@@ -3,12 +3,13 @@
   $is_logged = $_SESSION['is_logged'];
   if($is_logged=='YES') {
     $button = '<a href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/logout.php" class="btn btn-primary">로그아웃</a>';
+    $user_id = $_SESSION['user_id'];
+    $recommendSeat = '';
   }
   else {
     $button = ' ';
+    $recommendSeat = '<h3>로그인을 하면 좌석 추천 서비스를 이용하실 수 있습니다.</h3> <a href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php" class="btn btn-primary">로그인하기</a>';
   }
-
-  $user_id = $_SESSION['user_id'];
 
   $conn = mysqli_connect("localhost", "sjlim333", "j08300104", "sjlim333", "3306");
   if (!$conn) {
@@ -133,6 +134,8 @@
       <br><br><hr>
 
       <h2 class="my-4">추천 좌석</h2>
+      <?php echo $recommendSeat; ?>
+
       <!-- Marketing Icons Section -->
       <div class="row">
         <div class="col-lg-4 mb-4">

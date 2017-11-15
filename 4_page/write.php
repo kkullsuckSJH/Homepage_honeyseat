@@ -32,14 +32,49 @@
   VALUES (NULL, '{$seat_code}', '{$distance_score}', '{$sound_score}', '{$cost_score}', '{$score_star}');";
   $result2 = mysqli_query($conn, $sql);
 
+    # insert to review table ..
   $sql = "INSERT INTO `review`(`review_num`, `audi_code`, `floor`, `seat_num`, `seat_code`, `score_code`, `title`, `content`, `user_id`, `date`)
   VALUES (NULL,'{$audi_name}','{$floor}','{$seat_num}','{$seat_code}', LAST_INSERT_ID(),'{$title}','{$content}', '{$user_id}', now());";
   $result3 = mysqli_query($conn, $sql);
 
-    if (! $result) {
-      # code...
-      echo "query error";
-    }
+    # average distance_score ..
+  $sql = "SELECT ROUND(AVG(`score_distance`),3)
+  FROM `score`
+  GROUP BY `seat_code` = '{$seat_code}';";
+
+  $result = mysqli_query($conn, $sql);
+  $avr_socre_distance_array = mysqli_fetch_array($result);
+  $avr_socre_distance = $avr_socre_distance_array['ROUND(AVG(`score_distance`),3)'];
+
+    # average cost_score ..
+  $sql = "SELECT ROUND(AVG(`score_cost`),3)
+  FROM `score`
+  GROUP BY `seat_code` = '{$seat_code}';";
+  $result = mysqli_query($conn, $sql);
+  $avr_score_cost_array = mysqli_fetch_array($result);
+  $avr_score_cost = $avr_score_cost_array['ROUND(AVG(`score_cost`),3)'];
+
+    # average sound_score ..
+  $sql = "SELECT ROUND(AVG(`score_sound`),3)
+  FROM `score`
+  GROUP BY `seat_code` = '{$seat_code}';";
+  $result = mysqli_query($conn, $sql);
+  $avr_score_sound_array = mysqli_fetch_array($result);
+  $avr_score_sound = $avr_score_sound_array['ROUND(AVG(`score_sound`),3)'];
+
+    # average sound_star ..
+  $avr_score_star = ($avr_socre_distance + $avr_score_sound + $avr_score_cost) / 3.0;
+
+   # insert to seat table..
+  $sql = "UPDATE `seat`
+  SET `avr_distance`='{$avr_socre_distance}',`avr_score_sound`='{$avr_score_sound}',`avr_score_cost`='{$avr_score_cost}',`avr_score_star`= '{$avr_score_star}'
+  WHERE `seat_code`='{$seat_code}';";
+  $result4 = mysqli_query($conn, $sql);
+
+  if (! $result) {
+    # code...
+    echo "query error";
+  }
 
   mysqli_close($conn);
 ?>
