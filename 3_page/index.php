@@ -94,6 +94,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/5_page/index.php">후기 게시판</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성</a>
                 </li>
                 <?php echo $button; ?>
@@ -131,6 +134,18 @@
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><hr>
+
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="container text-center">
+          <p class="lead">각 좌석도에서 좌석 버튼을 클릭하시면 해당 좌석에서 촬영한 무대시각선을 보실 수 있습니다. <br>
+           촬영 시야(VIEW)이기 때문에 실제 눈으로 보는 것과는 약간의 차이가 있을 수 있습니다.
+            </p>
+        </div>
+      </section>
+
+      <hr>
+      <br>
 
       <h2 class="my-4">추천 좌석</h2>
       <!-- Marketing Icons Section -->
@@ -189,192 +204,8 @@
           </div>
         </div>
       </div>
-      <!-- /.row -->
-
-      <hr>
-      <!-- Portfolio Section -->
-      <h2 style="margin-bottom:30px;">좌석 정보 & 후기</h2>
-      <br>
-      <!-- /.row -->
-      <!-- Features Section -->
-      <div class="container">
-        <!--좌석배치도-->
-        <script>
-        /*var img = new Array("1st_floor.PNG", "2nd_floor.PNG", "3rd floor.PNG");
-        var i;
-        i = 0;
-        function changeImg(){
-          document.floor_img.src = img[i++];
-        }*/
-          function changeImg1(){
-            var floor_img = document.getElementById('floor_img_1');
-            floor_img.src = "img/1st_floor.PNG";
-          }
-            function changeImg2(){
-              var floor_img = document.getElementById('floor_img_1');
-              floor_img.src = "img/2nd_floor.PNG";
-            }
-              function changeImg3(){
-                var floor_img = document.getElementById('floor_img_1');
-                floor_img.src = "img/3rd_floor.PNG";
-              }
-        </script>
-
-        <img class="img-fluid rounded" src="img/1st_floor.PNG" alt="" id="floor_img_1">
-
-      <br><br>
-
-        <div class="row" style="margin-top:30px;">
-          <div class="col-sm-3">
-            <center>
-              <div class="btn-group">
-                <center>
-                  <input type="button" class="btn btn-primary" value="1" onClick="changeImg1()">
-                  <input type="button" class="btn btn-primary" value="2" onClick="changeImg2()">
-                  <input type="button" class="btn btn-primary" value="3" onClick="changeImg3()">
-                </center>
-              </div>
-            </center>
-          </div>
-
-          <div class="col-sm-3 col-sm-offset-7">
-            <div id="imaginary_container">
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary">
-                  <input type="radio" name="selectFloor" id="1st"> 1충
-                </label>
-                <label class="btn btn-primary active">
-                  <input type="radio" name="selectFloor" id="2nd"> 2층
-                </label>
-                <label class="btn btn-primary">
-                  <input type="radio" name="selectFloor" id="3rd"> 3층
-                </label>
-              </div>
-              <div class="input-group stylish-input-group">
-                <input type="text" class="form-control"  placeholder="ex) A001" >
-                <span class="input-group-addon">
-                  <button type="submit"> search </button>
-                </span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-<br><br><br>
-
-
-      <!--review board-->
-      <div class="container">
-
-        <table class="table table-hover" >
-          <thead>
-            <tr>
-              <th class="col-xs-0.5">글번호</th>
-              <th class="col-xs-1.5">공연장</th>
-              <th class="col-xs-0.5">층</th>
-              <th class="col-xs-0.5">좌석번호</th>
-              <th class="col-xs-0.5">별점</th>
-              <th class="col-xs-5.5">제목</th>
-              <th class="col-xs-1.5">작성자</th>
-              <th class="col-xs-1.5">날짜</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-              $sql = "SELECT * FROM `review` ORDER BY `review_num` DESC;";
-              $result = mysqli_query($conn, $sql);
-              while ($row = mysqli_fetch_assoc($result)) {
-                # split date & time ..
-                $split_date_time = explode(' ', "{$row['date']} ");
-                $date = $split_date_time[0];
-                $time = $split_date_time[1];
-                if ($date == Date('Y-m-d')){
-                  $row['date'] = $time;
-                }
-                else {
-                  $row['date'] = $date;
-                }
-
-                $seat_num =  $row['seat_num'];
-                $audi_code =  $row['audi_code'];
-
-                  # select audi_name ..
-                $sql = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
-                $result = mysqli_query($conn, $sql);
-                $audi_name_row = mysqli_fetch_assoc($result);
-                $audi_name = $audi_name_row['audi_name'];
-
-                # select audi_name ..
-                // $sql = "SELECT `star` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
-                // $result = mysqli_query($conn, $sql);
-                // $audi_name_array = mysqli_fetch_array($result);
-                // $audi_name = $seat_code_array['audi_name'];
-                //
-                $floor = $row['floor']."층";
-             ?>
-            <tr>
-              <td><?php echo $row['review_num'];?></td>
-              <td><?php echo $audi_name;?></td>
-              <td><?php echo $floor;?></td>
-              <td><?php echo $seat_num;?></td>
-              <td><?php echo $star;?></td>
-              <td><?php echo $row['title'];?></td>
-              <td><?php echo $row['user_id'];?></td>
-              <td><?php echo $row['date'];?></td>
-            </tr>
-          <?php } ?>
-          </tbody>
-        </table>
-        <hr/>
-          <a href="#" class="btn btn-primary">후기 작성하기</a>
-
-        <a class="btn btn-default"></a>
-        <div class="jb-center">
-          <div class="text-center">
-            <ul class="pagination">
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-            </ul>
-          </div>
-        </div>
-
-      <script src="js/jquery-3.1.1.js">
-
-      </script>
-
-
-      <br>
-      <br>
-      <h2>[좌석번호]</h2>
-      <p>The Modern Business template by Start Bootstrap includes:</p>
-          <ul>
-            <li>
-              <strong>Bootstrap v4</strong>
-            </li>
-            <li>jQuery</li>
-            <li>Font Awesome</li>
-            <li>Working contact form with validation</li>
-            <li>Unstyled page elements for easy customization</li>
-          </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-        <!-- /.row -->
-        <hr>
-
-    </div>
-
-
-      <!-- Call to Action Section -->
-      <div class="row mb-4">
-        <div class="col-md-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-        </div>
-        <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-        </div>
-      </div>
+      <br><br><br>
+      <script src="js/jquery-3.1.1.js"></script>
 
     </div>
     <!-- /.container -->

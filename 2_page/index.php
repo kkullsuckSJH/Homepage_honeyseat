@@ -50,6 +50,9 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/5_page/index.php">후기 게시판</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성</a>
             </li>
             <?php echo $button; ?>
