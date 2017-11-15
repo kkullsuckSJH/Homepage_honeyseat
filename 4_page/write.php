@@ -37,6 +37,12 @@
   VALUES (NULL,'{$audi_name}','{$floor}','{$seat_num}','{$seat_code}', LAST_INSERT_ID(),'{$title}','{$content}', '{$user_id}', now());";
   $result3 = mysqli_query($conn, $sql);
 
+    if (! $result3) {
+      # code...
+      echo $sql;
+      echo "query error";
+    }
+
     # average distance_score ..
   $sql = "SELECT ROUND(AVG(`score_distance`),3)
   FROM `score`

@@ -44,52 +44,8 @@
     <!--korean font http://moolgogiheart.tistory.com/89-->
     <link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
 
-    <style>
-          .dropbtn {
-          background-color: #4CAF50;
-          color: white;
-          padding: 16px;
-          font-size: 16px;
-          border: none;
-          cursor: pointer;
-      }
-
-      .dropdown {
-          position: relative;
-          display: inline-block;
-      }
-
-      .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-      }
-
-      .dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-      }
-
-      .dropdown-content a:hover {background-color: #f1f1f1}
-
-      .dropdown:hover .dropdown-content {
-          display: block;
-      }
-
-      .dropdown:hover .dropbtn {
-          background-color: #3e8e41;
-      }
-    </style>
-
   </head>
-
   <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
@@ -119,28 +75,17 @@
               </div>
             </div>
           </nav>
-
-      </div>
     </nav>
 
     <div class="container">
-
       <br>
 
       <!-- Portfolio Section -->
       <h2 style="margin-bottom:30px;">공연장, 좌석 확인</h2>
       <br>
-      <!-- /.row -->
-      <!-- Features Section -->
       <div class="container">
         <!--좌석배치도-->
         <script>
-        /*var img = new Array("1st_floor.PNG", "2nd_floor.PNG", "3rd floor.PNG");
-        var i;
-        i = 0;
-        function changeImg(){
-          document.floor_img.src = img[i++];
-        }*/
           function changeImg1(){
             var floor_img = document.getElementById('floor_img_1');
             floor_img.src = "img/1st_floor.PNG";
@@ -154,79 +99,11 @@
                 floor_img.src = "img/3rd_floor.PNG";
               }
         </script>
-
       <img class="img-fluid rounded" src="img/1st_floor.PNG" alt="" id="floor_img_1">
 
       <br><br>
-
       <p>원하시는 공연장과 층을 클릭해주세요.</p>
-
-      <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn" style="width: 300px;padding-top: 7px;padding-bottom: 7px;">공연장</button>
-        <div id="myDropdown" class="dropdown-content"style="width: 300px; height: 250px;">
-          <a href="#home">세종문화회관 - 세종대극장</a>
-          <a href="#about">충무아트센터 - 대극장</a>
-          <a href="#contact">예술의 전당 - 자유소극장</a>
-          <a href="#contact">샤롯데씨어터</a>
-          <a href="#contact">국립극장 - 해오름극장</a>
-        </div>
-      </div>
-
-      <script>
-      /* When the user clicks on the button,
-      toggle between hiding and showing the dropdown content */
-      function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-      </script>
-
-
-        <!-- <div class="row" style="margin-top:30px;">
-          <div class="col-sm-3">
-            <center>
-              <div class="btn-group">
-                <center>
-                  <input type="button" class="btn btn-primary" value="1" onClick="changeImg1()">
-                  <input type="button" class="btn btn-primary" value="2" onClick="changeImg2()">
-                  <input type="button" class="btn btn-primary" value="3" onClick="changeImg3()">
-                </center>
-              </div>
-            </center>
-          </div>
-        </div> -->
-
-
-        <!-- <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <button type="button" class="btn btn-success">공연장 선택</button>
-          <div class="btn-group" role="group">
-            <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-              <a class="dropdown-item" href="#">세종문화회관 - 세종대극장</a>
-              <a class="dropdown-item" href="#">충무아트센터 - 대극장</a>
-              <a class="dropdown-item" href="#">예술의 전당 - 자유소극장</a>
-              <a class="dropdown-item" href="#">샤롯데씨어터</a>
-              <a class="dropdown-item" href="#">국립극장 - 해오름극장</a>
-            </div>
-          </div>
-        </div> -->
-
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
         <div class="btn-group" data-toggle="buttons">
           <label class="btn btn-primary active">
             <input type="radio" name="options" id="option1" checked="" value="1" onClick="changeImg1()">1층
@@ -238,7 +115,6 @@
             <input type="radio" name="options" id="option3" value="3" onClick="changeImg3()">3층
           </label>
         </div>
-
       </div>
 
       <br><br>
@@ -247,95 +123,63 @@
       <h2 style="margin-bottom:30px;">후기 게시판</h2>
       <br>
 
-
-      <p>후기가 궁금한 공연장과 층을 선택해주세요.</p>
-
-      <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn" style="width: 300px;padding-top: 7px;padding-bottom: 7px;">공연장</button>
-        <div id="myDropdown" class="dropdown-content"style="width: 300px; height: 250px;">
-          <a href="#home">세종문화회관 - 세종대극장</a>
-          <a href="#about">충무아트센터 - 대극장</a>
-          <a href="#contact">예술의 전당 - 자유소극장</a>
-          <a href="#contact">샤롯데씨어터</a>
-          <a href="#contact">국립극장 - 해오름극장</a>
+      <div class="container">
+      	<div class="row">
+      		<div class="container">
+            <div class="search-form">
+              <form class="" action="index.php" method="get">
+                <div class="row">
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 sec">
+                    <p>후기가 궁금한 공연장과 층을 선택해주세요.</p>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                  <div class="col-md-3 col-sm-3 col-xs-3 sec">
+                    <select class="form-control" name="search_audi_name">
+                      <option>공연장</option>
+                      <option value="1">세종문화회관 - 세종대극장</option>
+                      <option value="2">충무아트센터 - 대극장</option>
+                      <option value="3">예술의 전당 - 자유소극장</option>
+                      <option value="4">샤롯데씨어터</option>
+                      <option value="5">국립극장 - 해오름극장</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3 sec">
+                    <select class="form-control" name="search_floor">
+                      <option>층수</option>
+                      <option value="1">1층</option>
+                      <option value="2">2층</option>
+                      <option value="3">3층</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="search" name="search_seat_num" class="form-control" placeholder="ex) A001">
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-5 col-sm-5 col-xs-5"></div>
+                  <div class="col-md-2 col-sm-2 col-xs-3">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                  <div class="col-md-5 col-sm-5 col-xs-35"></div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-
-      <script>
-      /* When the user clicks on the button,
-      toggle between hiding and showing the dropdown content */
-      function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-      </script>
-
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary active">
-          <input type="radio" name="options" id="option1" checked="">1층
-        </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" id="option2">2층
-        </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" id="option3">3층
-        </label>
-      </div>
-
-      <div class="col-sm-3 col-sm-offset-7">
-        <div id="imaginary_container">
-          <div class="input-group stylish-input-group">
-            <input type="text" class="form-control"  placeholder="ex) A001" >
-            <span class="input-group-addon">
-              <button type="submit"> search </button>
-            </span>
-          </div>
-        </div>
-      </div>
-
       <br><br>
-
-      <!-- <div class="col-sm-3 col-sm-offset-7">
-        <div id="imaginary_container">
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary">
-              <input type="radio" name="selectFloor" id="1st"> 1충
-            </label>
-            <label class="btn btn-primary active">
-              <input type="radio" name="selectFloor" id="2nd"> 2층
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="selectFloor" id="3rd"> 3층
-            </label>
-          </div>
-          <div class="input-group stylish-input-group">
-            <input type="text" class="form-control"  placeholder="ex) A001" >
-            <span class="input-group-addon">
-              <button type="submit"> search </button>
-            </span>
-          </div>
-        </div>
-      </div> -->
-
       <!--review board-->
       <div class="container">
-
         <table class="table table-hover" >
           <thead>
             <tr>
@@ -350,50 +194,66 @@
             </tr>
           </thead>
           <tbody>
+
             <?php
+            if (empty($_GET['search_seat_num']) || empty($_GET['search_audi_name']) || empty($_GET['search_floor'])) {
               $sql = "SELECT * FROM `review` ORDER BY `review_num` DESC;";
-              $result = mysqli_query($conn, $sql);
-              while ($row = mysqli_fetch_assoc($result)) {
-                # split date & time ..
-                $split_date_time = explode(' ', "{$row['date']} ");
-                $date = $split_date_time[0];
-                $time = $split_date_time[1];
-                if ($date == Date('Y-m-d')){
-                  $row['date'] = $time;
-                }
-                else {
-                  $row['date'] = $date;
-                }
+            }
+            else {
+              $sql = "SELECT * FROM `review`
+              WHERE `audi_code` = '{$_GET['search_audi_name']}'
+              AND `floor` = '{$_GET['search_floor']}'
+              AND `seat_num` = '{$_GET['search_seat_num']}'
+              ORDER BY `review_num` DESC;";
+            }
 
-                $seat_num =  $row['seat_num'];
-                $audi_code =  $row['audi_code'];
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+              # split date & time ..
+              $split_date_time = explode(' ', "{$row['date']} ");
+              $date = $split_date_time[0];
+              $time = $split_date_time[1];
+              if ($date == Date('Y-m-d')){
+                $row['date'] = $time;
+              }
+              else {
+                $row['date'] = $date;
+              }
 
-                  # select audi_name ..
-                $sql = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
-                $result = mysqli_query($conn, $sql);
-                $audi_name_row = mysqli_fetch_assoc($result);
-                $audi_name = $audi_name_row['audi_name'];
+              $seat_num =  $row['seat_num'];
+              $audi_code =  $row['audi_code'];
+              $score_code =  $row['score_code'];
 
                 # select audi_name ..
-                // $sql = "SELECT `star` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
-                // $result = mysqli_query($conn, $sql);
-                // $audi_name_array = mysqli_fetch_array($result);
-                // $audi_name = $seat_code_array['audi_name'];
-                //
-                $floor = $row['floor']."층";
+              $sql = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
+              $result = mysqli_query($conn, $sql);
+              $audi_name_row = mysqli_fetch_assoc($result);
+              $audi_name = $audi_name_row['audi_name'];
+
+              $floor = $row['floor']."층";
+              $review_num = $row['review_num'];
+              $title = $row['title'];
+              $user_id = $row['user_id'];
+              $date = $row['date'];
+
+                # select star ..
+              $sql = "SELECT `score_star` FROM `score` WHERE `score_code` = '{$score_code}';";
+              $result = mysqli_query($conn, $sql);
+              $score_star_row = mysqli_fetch_assoc($result);
+              $score_star = $score_star_row['score_star'];
              ?>
             <tr>
-              <td><?php echo $row['review_num'];?></td>
+              <td><?php echo $review_num;?></td>
               <td><?php echo $audi_name;?></td>
               <td><?php echo $floor;?></td>
               <td><?php echo $seat_num;?></td>
-              <td><?php echo $star;?></td>
-              <td><?php echo $row['title'];?></td>
-              <td><?php echo $row['user_id'];?></td>
-              <td><?php echo $row['date'];?></td>
+              <td><?php echo $score_star;?></td>
+              <td><?php echo $title;?></td>
+              <td><?php echo $user_id;?></td>
+              <td><?php echo $date;?></td>
             </tr>
-          <?php } ?>
           </tbody>
+        <?php } ?>
         </table>
         <hr>
 
@@ -412,9 +272,7 @@
             </div>
           </div>
         </div>
-
       <script src="js/jquery-3.1.1.js"></script>
-
     </div>
 
       <!-- 바로가기 버튼 -->
@@ -424,7 +282,6 @@
           <a class="btn btn-lg btn-secondary btn-block" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성하러 바로가기</a>
         </div>
       </div>
-
     </div>
     <!-- /.container -->
 
@@ -442,5 +299,4 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
-
 </html>
