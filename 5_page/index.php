@@ -162,8 +162,8 @@
       <p>원하시는 공연장과 층을 클릭해주세요.</p>
 
       <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn" style="width: 200px;padding-top: 7px;padding-bottom: 7px;">공연장</button>
-        <div id="myDropdown" class="dropdown-content"style="width: 200px; height: 200px;">
+      <button onclick="myFunction()" class="dropbtn" style="width: 300px;padding-top: 7px;padding-bottom: 7px;">공연장</button>
+        <div id="myDropdown" class="dropdown-content"style="width: 300px; height: 250px;">
           <a href="#home">세종문화회관 - 세종대극장</a>
           <a href="#about">충무아트센터 - 대극장</a>
           <a href="#contact">예술의 전당 - 자유소극장</a>
@@ -248,19 +248,42 @@
       <br>
 
 
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-success">공연장 선택</button>
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-            <a class="dropdown-item" href="#">세종문화회관 - 세종대극장</a>
-            <a class="dropdown-item" href="#">충무아트센터 - 대극장</a>
-            <a class="dropdown-item" href="#">예술의 전당 - 자유소극장</a>
-            <a class="dropdown-item" href="#">샤롯데씨어터</a>
-            <a class="dropdown-item" href="#">국립극장 - 해오름극장</a>
-          </div>
+      <p>후기가 궁금한 공연장과 층을 선택해주세요.</p>
+
+      <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn" style="width: 300px;padding-top: 7px;padding-bottom: 7px;">공연장</button>
+        <div id="myDropdown" class="dropdown-content"style="width: 300px; height: 250px;">
+          <a href="#home">세종문화회관 - 세종대극장</a>
+          <a href="#about">충무아트센터 - 대극장</a>
+          <a href="#contact">예술의 전당 - 자유소극장</a>
+          <a href="#contact">샤롯데씨어터</a>
+          <a href="#contact">국립극장 - 해오름극장</a>
         </div>
       </div>
+
+      <script>
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
       <div class="btn-group" data-toggle="buttons">
