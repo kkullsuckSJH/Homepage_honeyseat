@@ -75,7 +75,6 @@
 
   <body>
 
-
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
@@ -163,25 +162,25 @@
 
             <!--별점-->
             <div class="card-footer">
-              <span class="star-input">
-              	<span class="input">
-                  	<input type="radio" name="star-input" value="1" id="p1">
-                  	<label for="p1">1</label>
-                  	<input type="radio" name="star-input" value="2" id="p2">
-                  	<label for="p2">2</label>
-                  	<input type="radio" name="star-input" value="3" id="p3">
-                  	<label for="p3">3</label>
-                  	<input type="radio" name="star-input" value="4" id="p4">
-                  	<label for="p4">4</label>
-                  	<input type="radio" name="star-input" value="5" id="p5">
-                  	<label for="p5">5</label>
-                	</span>
-                	<output for="star-input"><b>0</b>점</output>
-              </span>
+              <span class="star-input" style="padding-top: -;padding-right: 0px;padding-top: 0px;padding-left: 50px;padding-bottom: 0px;">
+                	<span class="input">
+                    	<input type="radio" name="star-input" value="1" id="p1">
+                    	<label for="p1">1</label>
+                    	<input type="radio" name="star-input" value="2" id="p2">
+                    	<label for="p2">2</label>
+                    	<input type="radio" name="star-input" value="3" id="p3">
+                    	<label for="p3">3</label>
+                    	<input type="radio" name="star-input" value="4" id="p4">
+                    	<label for="p4">4</label>
+                    	<input type="radio" name="star-input" value="5" id="p5">
+                    	<label for="p5">5</label>
+                  	</span>
+                  	<output for="star-input"><b>0</b>점</output>
+                </span>
               <script src="js/jquery-1.11.3.min.js"></script>
               <script src="js/star.js"></script>
-              <br>
             </div>
+
           </div>
         </div>
         <div class="col-lg-4 mb-4">
@@ -190,19 +189,54 @@
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
             </div>
+            <!--별점-->
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">view More</a>
+              <span class="star-input" style="padding-top: -;padding-right: 0px;padding-top: 0px;padding-left: 50px;padding-bottom: 0px;">
+                  <span class="input">
+                      <input type="radio" name="star-input" value="1" id="p1">
+                      <label for="p1">1</label>
+                      <input type="radio" name="star-input" value="2" id="p2">
+                      <label for="p2">2</label>
+                      <input type="radio" name="star-input" value="3" id="p3">
+                      <label for="p3">3</label>
+                      <input type="radio" name="star-input" value="4" id="p4">
+                      <label for="p4">4</label>
+                      <input type="radio" name="star-input" value="5" id="p5">
+                      <label for="p5">5</label>
+                    </span>
+                    <output for="star-input"><b>0</b>점</output>
+                </span>
+              <script src="js/jquery-1.11.3.min.js"></script>
+              <script src="js/star.js"></script>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Top 3</h4>
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
+            <!--별점-->
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">view More</a>
+              <span class="star-input" style="padding-top: -;padding-right: 0px;padding-top: 0px;padding-left: 50px;padding-bottom: 0px;">
+                	<span class="input">
+                    	<input type="radio" name="star-input" value="1" id="p1">
+                    	<label for="p1">1</label>
+                    	<input type="radio" name="star-input" value="2" id="p2">
+                    	<label for="p2">2</label>
+                    	<input type="radio" name="star-input" value="3" id="p3">
+                    	<label for="p3">3</label>
+                    	<input type="radio" name="star-input" value="4" id="p4">
+                    	<label for="p4">4</label>
+                    	<input type="radio" name="star-input" value="5" id="p5">
+                    	<label for="p5">5</label>
+                  	</span>
+                  	<output for="star-input"><b>0</b>점</output>
+                </span>
+              <script src="js/jquery-1.11.3.min.js"></script>
+              <script src="js/star.js"></script>
             </div>
           </div>
         </div>
