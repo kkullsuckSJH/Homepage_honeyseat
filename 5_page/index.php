@@ -196,6 +196,21 @@
           <tbody>
 
             <?php
+            // OPERATING PAGINATION
+            // http://blog.kurien.co.kr/529?category=574625
+            //
+            // if(isset($_GET['page'])) {
+	          //    $page = $_GET['page'];
+            // }
+            // else {
+	          //    $page = 1;
+            // }
+            // $sql = 'select count(*) as cnt from board_free order by b_no desc';
+            // $result = $db->query($sql);
+            // $row = $result->fetch_assoc();
+            // $allPost = $row['cnt']; //전체 게시글의 수
+
+
             if (empty($_GET['search_seat_num']) || empty($_GET['search_audi_name']) || empty($_GET['search_floor'])) {
               $sql = "SELECT * FROM `review` ORDER BY `review_num` DESC;";
             }
@@ -225,9 +240,9 @@
               $score_code =  $row['score_code'];
 
                 # select audi_name ..
-              $sql = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
-              $result = mysqli_query($conn, $sql);
-              $audi_name_row = mysqli_fetch_assoc($result);
+              $sql2 = "SELECT `audi_name` FROM `audi` WHERE `audi_code` = '{$audi_code}';";
+              $result2 = mysqli_query($conn, $sql2);
+              $audi_name_row = mysqli_fetch_assoc($result2);
               $audi_name = $audi_name_row['audi_name'];
 
               $floor = $row['floor']."층";
@@ -237,20 +252,20 @@
               $date = $row['date'];
 
                 # select star ..
-              $sql = "SELECT `score_star` FROM `score` WHERE `score_code` = '{$score_code}';";
-              $result = mysqli_query($conn, $sql);
-              $score_star_row = mysqli_fetch_assoc($result);
+              $sql3 = "SELECT `score_star` FROM `score` WHERE `score_code` = '{$score_code}';";
+              $result3 = mysqli_query($conn, $sql3);
+              $score_star_row = mysqli_fetch_assoc($result3);
               $score_star = $score_star_row['score_star'];
              ?>
             <tr>
-              <td><?php echo $review_num;?></td>
-              <td><?php echo $audi_name;?></td>
-              <td><?php echo $floor;?></td>
-              <td><?php echo $seat_num;?></td>
-              <td><?php echo $score_star;?></td>
-              <td><?php echo $title;?></td>
-              <td><?php echo $user_id;?></td>
-              <td><?php echo $date;?></td>
+              <td class="col-xs-0.5"><?php echo $review_num;?></td>
+              <td class="col-xs-1.5"><?php echo $audi_name;?></td>
+              <td class="col-xs-0.5"><?php echo $floor;?></td>
+              <td class="col-xs-0.5"><?php echo $seat_num;?></td>
+              <td class="col-xs-0.5"><?php echo $score_star;?></td>
+              <td class="col-xs-5.5"><?php echo $title;?></td>
+              <td class="col-xs-1.5"><?php echo $user_id;?></td>
+              <td class="col-xs-1.5"><?php echo $date;?></td>
             </tr>
             <?php } ?>
           </tbody>
@@ -282,23 +297,6 @@
             </a>
           </li>
         </ul>
-
-        <!-- <div class="row mb-4">
-          <div class="col-md-20"></div>
-          <div class="col-md-10">
-            <a class="btn btn-default"></a>
-            <div class="jb-center">
-              <div class="text-center">
-                <ul class="pagination">
-                  <li><a href="#">1&nbsp;</a></li>
-                  <li><a href="#">2&nbsp;</a></li>
-                  <li><a href="#">3</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
       <script src="js/jquery-3.1.1.js"></script>
     </div>
 
