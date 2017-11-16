@@ -252,8 +252,8 @@
               <td><?php echo $user_id;?></td>
               <td><?php echo $date;?></td>
             </tr>
+            <?php } ?>
           </tbody>
-        <?php } ?>
         </table>
         <hr>
 
@@ -279,7 +279,7 @@
       <div class="row mb-4">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성하러 바로가기</a>
+          <a class="btn btn-lg btn-secondary btn-block" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/4_page/index.php">후기 작성 바로가기</a>
         </div>
       </div>
     </div>
