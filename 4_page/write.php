@@ -73,7 +73,7 @@
 
    # insert to seat table..
   $sql = "UPDATE `seat`
-  SET `avr_distance`='{$avr_socre_distance}',`avr_score_sound`='{$avr_score_sound}',`avr_score_cost`='{$avr_score_cost}',`avr_score_star`= '{$avr_score_star}'
+  SET `avr_score_distance`='{$avr_socre_distance}',`avr_score_sound`='{$avr_score_sound}',`avr_score_cost`='{$avr_score_cost}',`avr_score_star`= '{$avr_score_star}'
   WHERE `seat_code`='{$seat_code}';";
   $result4 = mysqli_query($conn, $sql);
 

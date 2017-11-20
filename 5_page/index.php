@@ -104,6 +104,18 @@
       <br><br>
       <p>원하시는 공연장과 층을 클릭해주세요.</p>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-md-5 col-sm-5 col-xs-5 sec">
+          <select class="form-control" name="search_audi_name">
+            <option>공연장</option>
+            <option value="1">세종문화회관 - 세종대극장</option>
+            <option value="2">충무아트센터 - 대극장</option>
+            <option value="3">예술의 전당 - 자유소극장</option>
+            <option value="4">샤롯데씨어터</option>
+            <option value="5">국립극장 - 해오름극장</option>
+          </select>
+        </div>
+          <div class="col-md-7 col-sm-7 col-xs-7"></div>
+        </br>
         <div class="btn-group" data-toggle="buttons">
           <label class="btn btn-primary active">
             <input type="radio" name="options" id="option1" checked="" value="1" onClick="changeImg1()">1층

@@ -18,6 +18,7 @@
   mysqli_select_db($conn, "sjlim333");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,9 +144,72 @@
             </p>
         </div>
       </section>
-
       <hr>
       <br>
+
+      <?php
+      # select user_prefer ..
+      $sql = "SELECT `user_prefer_floor`, `user_prefer_distance`, `user_prefer_cost`, `user_prefer_sound`, `user_rank_distance`, `user_rank_cost`, `user_rank_sound`
+      FROM `user`
+      WHERE `user_id` = '{$user_id}';";
+      $result = mysqli_query($conn, $sql);
+      $user_array = mysqli_fetch_array($result);
+
+      $user_prefer_floor = $user_array['user_prefer_floor'];
+            $user_prefer_distance = $user_array['user_prefer_distance'];
+            $user_prefer_cost = $user_array['user_prefer_cost'];
+            $user_prefer_sound = $user_array['user_prefer_sound'];
+            $user_rank_distance = $user_array['user_rank_distance'];
+            $user_rank_cost = $user_array['user_rank_cost'];
+            $user_rank_sound = $user_array['user_rank_sound'];
+
+
+            $sql = "SELECT *  FROM `seat`
+            WHERE `audi_floor` = '{$user_prefer_floor}';";
+            $result = mysqli_query($conn, $sql);
+
+            $total_array = array();
+
+            while ($seat = mysqli_fetch_assoc($result)) {
+              $seat_num = $seat['seat_num'];
+              $avr_score_cost = $seat['avr_score_cost'];
+              $avr_score_sound = $seat['avr_score_sound'];
+              $avr_score_distance = $seat['avr_score_distance'];
+
+              if ($user_rank_distance == '1') {
+                $weight_distance = 3;
+              }
+              else if ($user_rank_distance == '3') {
+                $weight_distance = 1;
+              }
+              if ($user_rank_cost == '1') {
+                $weight_cost = 3;
+              }
+              else if ($user_rank_cost == '3') {
+                $weight_cost = 1;
+              }
+              if ($user_rank_sound == '1') {
+                $weight_sound = 3;
+              }
+              else if ($user_rank_sound == '3') {
+                $weight_sound = 1;
+              }
+
+              $total = abs(($avr_score_distance * $weight_distance) - $user_prefer_distance)
+                     + abs(($avr_score_cost * $weight_cost) - $user_prefer_cost)
+                     + abs(($avr_score_sound * $weight_sound) - $user_prefer_sound);
+
+              $total_array["$seat_num"] = $total;
+            }
+            asort($total_array);
+            $rank_array = array();
+
+            for ($i=0; $i <3 ; $i++) {
+              array_push($rank_array, key($total_array));
+              next($total_array);
+            }
+           ?>
+
 
       <h2 class="my-4">추천 좌석</h2>
       <?php echo $recommendSeat; ?>
@@ -157,7 +221,22 @@
             <h4 class="card-header">Top 1</h4>
             <div class="card-body">
 
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">
+                <?php
+
+                # select user_prefer ..
+                $sql = "SELECT `avr_score_star` FROM `seat` WHERE `seat_num` = '{$rank_array[0]}' AND `audi_floor` = '{$user_prefer_floor}';";
+                $result = mysqli_query($conn, $sql);
+                $seat_1st = mysqli_fetch_array($result);
+
+                echo $rank_array[0];
+                echo "\n";
+                echo $user_prefer_floor;
+                echo "\n";
+                echo $seat_1st['avr_score_star'];
+                 ?>
+
+              </p>
             </div>
 
             <!--별점-->
