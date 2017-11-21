@@ -253,9 +253,10 @@
                     	<label for="p4">4</label>
                     	<input type="radio" name="star-input" value="5" id="p5">
                     	<label for="p5">5</label>
-                  	</span>
+                  </span>
                   	<output for="star-input"><b>0</b>점</output>
-                </span>
+              </span>
+              <br>
               <script src="js/jquery-1.11.3.min.js"></script>
               <script src="js/star.js"></script>
             </div>
