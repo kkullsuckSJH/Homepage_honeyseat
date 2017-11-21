@@ -73,82 +73,82 @@
     </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="container text-center">
-        <p class="lead">각 좌석도에서 좌석 버튼을 클릭하시면 해당 좌석에서 촬영한 무대시각선을 보실 수 있습니다. <br>
-촬영 시야(VIEW)이기 때문에 실제 눈으로 보는 것과는 약간의 차이가 있을 수 있습니다.
-          </p>
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <!-- icon : http://fontawesome.io/icons/-->
-    <!-- Services -->
-    <section id="services" class="services bg-primary text-white">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-10 mx-auto">
-            <h2>Our Services</h2>
-            <hr class="small">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-eye fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>3D Simulation</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-bar-chart fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>좌석 후기</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-thumbs-o-up fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>좌석 추천</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-users fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>1st commnity</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </div>
-            <!-- /.row (nested) -->
+        <!-- About -->
+        <section id="about" class="about">
+          <div class="container text-center">
+            <p class="lead">
+              HONEY SEAT 홈페이지를 통해서 원하는 공연장의 해당 좌석에 대한 무대시각선을 3D Simulation을 통해 <br> 360도로 확인할 수 있습니다. 후기 게시판을 통해 각 좌석에 대한 거리, 가격, 사운드 평가를 볼 수 있습니다.
+              </p>
           </div>
-          <!-- /.col-lg-10 -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
+          <!-- /.container -->
+        </section>
+
+        <!-- icon : http://fontawesome.io/icons/-->
+        <!-- Services -->
+        <section id="services" class="services bg-primary text-white">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-lg-10 mx-auto">
+                <h2>Our Services</h2>
+                <hr class="small">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                      <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-eye fa-stack-1x text-primary"></i>
+                      </span>
+                      <h4>
+                        <strong>3D Simulation</strong>
+                      </h4>
+                      <p>3D 시뮬레이션을 통해 특정 좌석의 무대 시야를 확인할 수 있습니다.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                      <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bar-chart fa-stack-1x text-primary"></i>
+                      </span>
+                      <h4>
+                        <strong>좌석 후기</strong>
+                      </h4>
+                      <p>5대 공연장의 각 좌석마다 후기를 남기고 다른 회원의 의견을 조회할 수 있습니다.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                      <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-thumbs-o-up fa-stack-1x text-primary"></i>
+                      </span>
+                      <h4>
+                        <strong>좌석 추천</strong>
+                      </h4>
+                      <p>사용자 선호도 중심으로 좌석을 추천해드립니다.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                      <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-users fa-stack-1x text-primary"></i>
+                      </span>
+                      <h4>
+                        <strong>1st commnity</strong>
+                      </h4>
+                      <p>국내 최초로 구축된 공연장 관련 커뮤니티입니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.row (nested) -->
+              </div>
+              <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+        </section>
 
     <!-- Callout -->
     <aside class="callout">
@@ -206,9 +206,6 @@
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary text-white">
       <div class="container text-center">
-        <h3>The buttons below are impossible to resist.</h3>
-        <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-        <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
       </div>
     </aside>
 
