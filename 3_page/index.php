@@ -220,28 +220,9 @@
 
             <!--별점-->
             <div class="card-footer">
-<<<<<<< HEAD
-              <span class="star-input" style="padding-top: -;padding-right: 0px;padding-top: 0px;padding-left: 50px;padding-bottom: 0px;">
-                	<span class="input">
-                    	<input type="radio" name="star-input" value="1" id="p1">
-                    	<label for="p1">1</label>
-                    	<input type="radio" name="star-input" value="2" id="p2">
-                    	<label for="p2">2</label>
-                    	<input type="radio" name="star-input" value="3" id="p3">
-                    	<label for="p3">3</label>
-                    	<input type="radio" name="star-input" value="4" id="p4">
-                    	<label for="p4">4</label>
-                    	<input type="radio" name="star-input" value="5" id="p5">
-                    	<label for="p5">5</label>
-                  </span>
-                  	<output for="star-input"><b>0</b>점</output>
-              </span>
-              <br>
-=======
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
->>>>>>> 615210e6155f82ed95e171894f4a186f3586a12a
               <script src="js/jquery-1.11.3.min.js"></script>
               <!-- <script src="js/star.js"></script> -->
             </div>
