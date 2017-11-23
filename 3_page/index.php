@@ -202,7 +202,6 @@
             <div class="card-body">
               <p class="card-text">
                 <?php
-
                 # select user_prefer ..
                 $sql = "SELECT `avr_score_star` FROM `seat` WHERE `seat_num` = '{$rank_array[0]}' AND `audi_floor` = '{$user_prefer_floor}';";
                 $result = mysqli_query($conn, $sql);
@@ -212,9 +211,12 @@
                 echo "\n";
                 echo $user_prefer_floor;
                 echo "\n";
-                echo $seat_1st['avr_score_star'];
+                echo $seat_1st['avr_score_cost'];
+                echo "\n";
+                echo $seat_1st['avr_score_sound'];
+                echo "\n";
+                echo $seat_1st['avr_score_distance'];
                  ?>
-
               </p>
             </div>
 
@@ -233,10 +235,30 @@
           <div class="card h-100">
             <h4 class="card-header">Top 2</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+              <p class="card-text">
+                  <?php
+                  # select user_prefer ..
+                  $sql = "SELECT `avr_score_star` FROM `seat` WHERE `seat_num` = '{$rank_array[1]}' AND `audi_floor` = '{$user_prefer_floor}';";
+                  $result = mysqli_query($conn, $sql);
+                  $seat_1st = mysqli_fetch_array($result);
+
+                  echo $rank_array[1];
+                  echo "\n";
+                  echo $user_prefer_floor;
+                   ?>
+              </p>
             </div>
             <!--별점-->
             <div class="card-footer">
+              <?php
+              echo "\n";
+              echo $seat_1st['avr_score_cost'];
+              echo "\n";
+              echo $seat_1st['avr_score_sound'];
+              echo "\n";
+              echo $seat_1st['avr_score_distance'];
+               ?>
+
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
@@ -249,10 +271,31 @@
           <div class="card h-100">
             <h4 class="card-header">Top 3</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">
+                <?php
+                # select user_prefer ..
+                $sql = "SELECT `avr_score_star` FROM `seat` WHERE `seat_num` = '{$rank_array[2]}' AND `audi_floor` = '{$user_prefer_floor}';";
+                $result = mysqli_query($conn, $sql);
+                $seat_1st = mysqli_fetch_array($result);
+                echo $rank_array[2];
+                echo "\n";
+                echo $user_prefer_floor;
+                 ?>
+              </p>
             </div>
             <!--별점-->
             <div class="card-footer">
+              <?php
+              echo "\n";
+              echo $seat_1st['avr_score_cost'];
+              echo "\n";
+              echo $seat_1st['avr_score_sound'];
+              echo "\n";
+              echo $seat_1st['avr_score_distance'];
+              ?>
+              <?php
+              echo " : ";
+              ?>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
               <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
