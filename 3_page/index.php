@@ -115,11 +115,12 @@
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><hr>
 
+
       <!-- About -->
       <section id="about" class="about">
         <div class="container text-center">
-          <p class="lead">각 좌석도에서 좌석 버튼을 클릭하시면 해당 좌석에서 촬영한 무대시각선을 보실 수 있습니다. <br>
-           촬영 시야(VIEW)이기 때문에 실제 눈으로 보는 것과는 약간의 차이가 있을 수 있습니다.
+          <p class="lead">각 좌석도에서 좌석 버튼을 클릭하시면 해당 좌석의 무대시각선을 보실 수 있습니다. <br>
+           3D 시뮬레이션 시야(VIEW)이기 때문에 실제 눈으로 보는 것과는 약간의 차이가 있을 수 있습니다.
             </p>
         </div>
       </section>
@@ -155,30 +156,54 @@
               $avr_score_sound = $seat['avr_score_sound'];
               $avr_score_distance = $seat['avr_score_distance'];
 
+
               if ($user_rank_distance == '1') {
-                $weight_distance = 3;
+                $weight_distance = 1.3;
               }
               else if ($user_rank_distance == '3') {
-                $weight_distance = 1;
+                $weight_distance = 1.1;
+              }
+              else {
+                $weight_distance = 1.2;
               }
               if ($user_rank_cost == '1') {
-                $weight_cost = 3;
+                $weight_cost = 1.3;
               }
               else if ($user_rank_cost == '3') {
-                $weight_cost = 1;
+                $weight_cost = 1.1;
+              }
+              else {
+                $weight_cost = 1.2;
               }
               if ($user_rank_sound == '1') {
-                $weight_sound = 3;
+                $weight_sound = 1.3;
               }
               else if ($user_rank_sound == '3') {
-                $weight_sound = 1;
+                $weight_sound = 1.1;
+              }
+              else {
+                $weight_sound = 1.2;
               }
 
-              $total = abs(($avr_score_distance * $weight_distance) - $user_prefer_distance)
-                     + abs(($avr_score_cost * $weight_cost) - $user_prefer_cost)
-                     + abs(($avr_score_sound * $weight_sound) - $user_prefer_sound);
+              $total = ((abs($avr_score_distance - $user_prefer_distance) + 1) * $weight_distance)
+                     + ((abs($avr_score_cost - $user_prefer_cost) + 1) * $weight_cost)
+                     + ((abs($avr_score_sound - $user_prefer_sound) + 1) * $weight_sound);
 
               $total_array["$seat_num"] = $total;
+
+
+              echo $seat_num;
+              echo ":";
+              echo $total;
+              echo "/ avr:";
+              echo $avr_score_distance;
+              echo ",";
+              echo $avr_score_cost;
+              echo ",";
+              echo $avr_score_sound;
+              echo "\n";
+
+
             }
             asort($total_array);
             $rank_array = array();
@@ -187,6 +212,7 @@
               array_push($rank_array, key($total_array));
               next($total_array);
             }
+
            ?>
 
 

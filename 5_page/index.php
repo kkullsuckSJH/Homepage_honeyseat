@@ -15,6 +15,115 @@
     echo "connect error";
   }
   mysqli_select_db($conn, "sjlim333");
+
+
+              // OPERATING PAGINATION
+              // http://blog.kurien.co.kr/529?category=574625
+
+              if(isset($_GET['page'])) {
+  	             $page = $_GET['page'];
+              }
+              else {
+  	             $page = 1;
+              }
+
+              $sql = "SELECT count(*) as cnt from `review` order by `review_num` desc;";
+              $result = mysqli_query($conn, $sql);
+              $row = mysqli_fetch_array($result);
+              $allPost = $row['cnt']; //전체 게시글의 수
+
+              $onePage = 10; // 한 페이지에 보여줄 게시글의 수.
+              $allPage = ceil($allPost / $onePage); //전체 페이지의 수
+
+              if($page < 1 || ($allPage && $page > $allPage)) {
+              ?>
+
+                <script>
+                alert("존재하지 않는 페이지입니다.");
+                history.back();
+              </script>
+
+              <?php
+              exit;
+            }
+
+            $oneSection = 10; //한번에 보여줄 총 페이지 개수(1 ~ 10, 11 ~ 20 ...)
+            $currentSection = ceil($page / $oneSection); //현재 섹션
+            $allSection = ceil($allPage / $oneSection); //전체 섹션의 수
+
+            $firstPage = ($currentSection * $oneSection) - ($oneSection - 1); //현재 섹션의 처음 페이지
+
+            if($currentSection == $allSection) {
+  	           $lastPage = $allPage; //현재 섹션이 마지막 섹션이라면 $allPage가 마지막 페이지가 된다.
+             }
+             else {
+  	            $lastPage = $currentSection * $oneSection; //현재 섹션의 마지막 페이지
+             }
+
+             $prevPage = (($currentSection - 1) * $oneSection); //이전 페이지, 11~20일 때 이전을 누르면 10 페이지로 이동.
+             $nextPage = (($currentSection + 1) * $oneSection) - ($oneSection - 1); //다음 페이지, 11~20일 때 다음을 누르면 21 페이지로 이동.
+
+
+             $paging = '<ul class="pagination justify-content-center">'; // 페이징을 저장할 변수
+
+             //첫 페이지가 아니라면 처음 버튼을 생성
+             if($page != 1) {
+             	$paging .=
+              '<li class="page-item">
+                <a class="page-link" href="./index.php?page=1" aria-label="start">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">처음</span>
+                </a>
+              </li>';
+             }
+             //첫 섹션이 아니라면 이전 버튼을 생성
+             if($currentSection != 1) {
+             	$paging .=
+              '<li class="page-item">
+                <a class="page-link" href="./index.php?page=' . $prevPage . '" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>';
+             }
+
+             for($i = $firstPage; $i <= $lastPage; $i++) {
+             	if($i == $page) {
+             		$paging .= '<li class="page-item active"><a class="page-link" href="#">' . $i . '</a></li>';
+             	}
+              else {
+             		$paging .= '<li class="page-item"><a class="page-link" href="./index.php?page=' . $i . '">' . $i . '</a></li>';
+             	}
+             }
+
+             //마지막 섹션이 아니라면 다음 버튼을 생성
+             if($currentSection != $allSection) {
+             	$paging .=
+              '<li class="page-item">
+                <a class="page-link" href="./index.php?page=' . $nextPage . '" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">다음</span>
+                </a>
+              </li>';
+             }
+
+             //마지막 페이지가 아니라면 끝 버튼을 생성
+             if($page != $allPage) {
+             	$paging .=
+              '<li class="page-item">
+                <a class="page-link" href="./index.php?page=' . $nextPage . '" aria-label="end">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">끝</span>
+                </a>
+              </li>';
+             }
+             $paging .= '</ul>';
+             /* 페이징 끝 */
+
+             $currentLimit = ($onePage * $page) - $onePage; //몇 번째의 글부터 가져오는지
+             $sqlLimit = ' limit ' . $currentLimit . ', ' . $onePage . ';'; //limit sql 구문
+
+             $sql = 'SELECT * from `review` order by review_num desc' . $sqlLimit; //원하는 개수만큼 가져온다. (0번째부터 20번째까지
 ?>
 
 <!DOCTYPE html>
@@ -117,8 +226,8 @@
           <div class="col-md-7 col-sm-7 col-xs-7"></div>
         </br>
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary active">
-            <input type="radio" name="options" id="option1" checked="" value="1" onClick="changeImg1()">1층
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option1" value="1" onClick="changeImg1()">1층
           </label>
           <label class="btn btn-primary">
             <input type="radio" name="options" id="option2" value="2" onClick="changeImg2()">2층
@@ -208,33 +317,19 @@
           <tbody>
 
             <?php
-            // OPERATING PAGINATION
-            // http://blog.kurien.co.kr/529?category=574625
-            //
-            // if(isset($_GET['page'])) {
-	          //    $page = $_GET['page'];
-            // }
-            // else {
-	          //    $page = 1;
-            // }
-            // $sql = 'select count(*) as cnt from board_free order by b_no desc';
-            // $result = $db->query($sql);
-            // $row = $result->fetch_assoc();
-            // $allPost = $row['cnt']; //전체 게시글의 수
-
 
             if (empty($_GET['search_seat_num']) || empty($_GET['search_audi_name']) || empty($_GET['search_floor'])) {
-              $sql = "SELECT * FROM `review` ORDER BY `review_num` DESC;";
-            }
-            else {
-              $sql = "SELECT * FROM `review`
-              WHERE `audi_code` = '{$_GET['search_audi_name']}'
-              AND `floor` = '{$_GET['search_floor']}'
-              AND `seat_num` = '{$_GET['search_seat_num']}'
-              ORDER BY `review_num` DESC;";
-            }
+             $sql = "SELECT * FROM `review` ORDER BY `review_num` DESC". $sqlLimit;
+           }
+           else {
+             $sql = "SELECT * FROM `review`
+             WHERE `audi_code` = '{$_GET['search_audi_name']}'
+             AND `floor` = '{$_GET['search_floor']}'
+             AND `seat_num` = '{$_GET['search_seat_num']}'
+             ORDER BY `review_num` DESC". $sqlLimit;
+           }
 
-            $result = mysqli_query($conn, $sql);
+           $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
               # split date & time ..
               $split_date_time = explode(' ', "{$row['date']} ");
@@ -286,30 +381,11 @@
         <br>
 
         <!-- Pagination -->
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Previous</span>
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
-          </li>
-        </ul>
-      <script src="js/jquery-3.1.1.js"></script>
+        <div class="paging">
+          <?php echo $paging ?>
+        </div>
+
+
     </div>
 
       <!-- 바로가기 버튼 -->
