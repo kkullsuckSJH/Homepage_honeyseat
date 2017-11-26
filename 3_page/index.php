@@ -20,7 +20,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
 
     <meta charset="utf-8">
@@ -35,7 +35,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-    <link href="css/star.css" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -51,7 +50,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 
-
   </head>
 
   <body>
@@ -66,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php">Home
+                  <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php">홈
                   </a>
                 </li>
                 <li class="nav-item">
@@ -86,30 +84,31 @@
           </div>
         </nav>
 
-      </div>
-    </nav>
-
     <div class="container">
+
       <div class="template">
         <div class="template-wrap clear">
           <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
           <br>
+          <div class="logo"></div>
+          <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+          <div class="title">New Unity Project</div>
         </div>
         <script type='text/javascript'>
-      var Module = {
-        TOTAL_MEMORY: 268435456,
-        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-        compatibilitycheck: null,
-        backgroundColor: "#222C36",
-        splashStyle: "Light",
-        dataUrl: "Release/좌석.data",
-        codeUrl: "Release/좌석.js",
-        asmUrl: "Release/좌석.asm.js",
-        memUrl: "Release/좌석.mem",
-      };
-    </script>
-    <script src="Release/UnityLoader.js"></script>
-  </div>
+        var Module = {
+          TOTAL_MEMORY: 268435456,
+          errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+          compatibilitycheck: null,
+          backgroundColor: "#222C36",
+          splashStyle: "Light",
+          dataUrl: "Release/좌석.datagz",
+          codeUrl: "Release/좌석.jsgz",
+          asmUrl: "Release/좌석.asm.jsgz",
+          memUrl: "Release/좌석.memgz",
+        };
+      </script>
+      <script src="Release/UnityLoader.js"></script>
+    </div>
 
     <!-- Page Content -->
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -222,11 +221,13 @@
 
             <!--별점-->
             <div class="card-footer">
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
+              <h6>거리</h6>
+
+              <h6>가격</h6>
+>
+              <h6>사운드</h6>
+
               <script src="js/jquery-1.11.3.min.js"></script>
-              <!-- <script src="js/star.js"></script> -->
             </div>
 
           </div>
@@ -248,6 +249,7 @@
                    ?>
               </p>
             </div>
+
             <!--별점-->
             <div class="card-footer">
               <?php
@@ -259,9 +261,22 @@
               echo $seat_1st['avr_score_distance'];
                ?>
 
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
+              <table>
+              <tr>
+                <td style="padding-right:10px">
+                  <label for="input-3" class="control-label">Likes</label>
+                </td>
+                <td>
+                  <input id="input-3" name="input-3" value="4" class="rating-loading">
+                </td>
+              </tr>
+              </table>
+
+              <h6>거리</h6>
+
+              <h6>가격</h6>
+
+              <h6>사운드</h6>
               <script src="js/jquery-1.11.3.min.js"></script>
             </div>
           </div>
@@ -293,12 +308,12 @@
               echo "\n";
               echo $seat_1st['avr_score_distance'];
               ?>
-              <?php
-              echo " : ";
-              ?>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
-              <div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
+              <h6>거리</h6>
+
+              <h6>가격</h6>
+
+              <h6>사운드</h6>
+
               <script src="js/jquery-1.11.3.min.js"></script>
             </div>
           </div>
@@ -324,5 +339,4 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
-
 </html>

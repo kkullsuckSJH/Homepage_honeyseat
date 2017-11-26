@@ -41,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php">Home
+              <a class="nav-link" href="http://sjlim333.cafe24.com/Homepage_honeyseat_final/1_page/index.php">홈
               </a>
             </li>
             <li class="nav-item">
@@ -104,7 +104,8 @@
         <div class="col-md-5">
           <h2>충무아트센터</h2>
           <h4>대극장</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+          <p>1,2,3층에 걸쳐 1,255석의 객석을 갖추고 있습니다.<br>
+          1층 690석과 2층 285석, 3층 280석을 갖춘 대극장은 가변형 음향판과 다채로운 무대막 전환이 용이한 38여개의 배턴, 그리고 최신의 음향과 조명 시스템을 갖추어 클래식 뿐만 아니라 다양한 장르의 공연을 소화할 수 있습니다. 또한, 효율적인 좌석배치를 해 사각지대를 없앰으로써 어느 자리에서나 최적의 관람 환경을 제공합니다.</p>
           <a class="btn btn-primary" href="#">View Auditorium</a>
         </div>
       </div>
@@ -124,7 +125,8 @@
         <div class="col-md-5">
           <h2>예술의 전당</h2>
           <h4>자유소극장</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+          <p>1,2,3층에 걸쳐 241석의 객석을 갖추고 있습니다.<br>
+            2,3층 좌석은 좌석번호와 관계없이 공연시작 30분 전 선착순 입장하는 자유석입니다. 자유소극장 1층 객석 통로가 무대 바로 앞에 위치하고 있어 공연 시작 후 1층으로 입장이 불가합니다. 2,3층 비지정석의 일반판매 가능석은 75석이며 작품의 무대설치(셋트)에 따라 사전승인 후 유동적으로 추가오픈이 가능합니다.</p>
           <a class="btn btn-primary" href="#">View Auditorium</a>
         </div>
       </div>
@@ -144,7 +146,8 @@
         </div>
         <div class="col-md-5">
           <h2>샤롯데씨어터</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+          <p>대한민국 최초이자 최고의 뮤지컬 전용 극장 샤롯데씨어터는 총 1,241석(1층 725석, 2층 516석)의 객석을 보유하고 있습니다.<br>
+            가장 큰 자랑거리는 바로 무대에서 객석까지의 간격이 국내에서 가장 가깝다는 것입니다. 무대에서부터 1층 최후 열 좌석까지 단 23m, 2층 최후 열 좌석까지는 28m로 그 어느 위치에 앉아도 무대의 생생함을 그대로 느낄 수 있습니다.</p>
           <a class="btn btn-primary" href="#">View Auditorium</a>
         </div>
       </div>
@@ -165,7 +168,8 @@
         <div class="col-md-5">
           <h2>국립극장</h2>
           <h3>해오름극장</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+          <p>대한민국을 대표하는 대극장으로, 모든 장르의 공연이 가능한 종합 무대공간입니다.<br>
+            1,563석(휠체어석 16석 포함)의 객석과 6석의 대기석을 갖추고 있으며 자유로운 공간 활용이 가능한 무대, 최첨단 조명 설비와 음향 시스템이 마련되어 있습니다. 특히 국내 극장 가운데 객석 간격이 가장 넓어 보다 쾌적한 공연 관람 환경을 제공하고 있습니다.</p>
           <a class="btn btn-primary" href="#">View Auditorium</a>
         </div>
       </div>
