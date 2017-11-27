@@ -36,19 +36,19 @@
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | New Unity Project</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
-
     <!--korean font http://moolgogiheart.tistory.com/89-->
     <link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | New Unity Project</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
 
   </head>
 
@@ -90,25 +90,25 @@
         <div class="template-wrap clear">
           <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
           <br>
-          <div class="logo"></div>
+          <!-- <div class="logo"></div>
           <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-          <div class="title">New Unity Project</div>
+          <div class="title">New Unity Project</div> -->
         </div>
         <script type='text/javascript'>
-        var Module = {
-          TOTAL_MEMORY: 268435456,
-          errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-          compatibilitycheck: null,
-          backgroundColor: "#222C36",
-          splashStyle: "Light",
-          dataUrl: "Release/좌석.data",
-          codeUrl: "Release/좌석.js",
-          asmUrl: "Release/좌석.asm.js",
-          memUrl: "Release/좌석.mem",
-        };
-      </script>
-      <script src="Release/UnityLoader.js"></script>
-    </div>
+      var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        backgroundColor: "#222C36",
+        splashStyle: "Light",
+        dataUrl: "Release/Unity_audi.data",
+        codeUrl: "Release/Unity_audi.js",
+        asmUrl: "Release/Unity_audi.asm.js",
+        memUrl: "Release/Unity_audi.mem",
+      };
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+  </div>
 
     <!-- Page Content -->
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
