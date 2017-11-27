@@ -20,7 +20,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
 
     <meta charset="utf-8">
@@ -101,10 +101,10 @@
           compatibilitycheck: null,
           backgroundColor: "#222C36",
           splashStyle: "Light",
-          dataUrl: "Release/좌석.datagz",
-          codeUrl: "Release/좌석.jsgz",
-          asmUrl: "Release/좌석.asm.jsgz",
-          memUrl: "Release/좌석.memgz",
+          dataUrl: "Release/좌석.data",
+          codeUrl: "Release/좌석.js",
+          asmUrl: "Release/좌석.asm.js",
+          memUrl: "Release/좌석.mem",
         };
       </script>
       <script src="Release/UnityLoader.js"></script>
@@ -217,8 +217,9 @@
 
 
       <h2 class="my-4">추천 좌석</h2>
-      <?php echo $recommendSeat_msg; ?>
 
+      <?php echo $recommendSeat_msg; ?>
+      <br><br>
       <!-- Marketing Icons Section -->
       <div class="row">
         <div class="col-lg-4 mb-4">
@@ -358,11 +359,6 @@
       </div>
       <!-- /.container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 </html>
